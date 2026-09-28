@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novo aqui? - IPPC Covilhã</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="form-container">
+        <!-- Logo -->
+        <header class="form-header">
+          <img
+            src="./assets/IPPC_logo_noBG.png"
+            alt="Logo IPP Covilhã"
+            class="profile-img"
+          />
+        </header>
+
+        <h1>Seja Bem-vindo!</h1>
+        <p class="subtitle">Queremos te conhecer você melhor.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <!-- Chave de acesso do Web3Forms  -->
+          <input type="hidden" name="access_key" value="SUA_CHAVE_AQUI" />
+
+          <!-- Nome do remetente que aparecerá no e-mail -->
+          <input
+            type="hidden"
+            name="subject"
+            value="Novo Visitante - IPPC Covilhã"
+          />
+          <input type="hidden" name="from_name" value="Site IPPC Covilhã" />
+
+          <!-- Nome -->
+          <div class="form-group">
+            <label for="nome">Nome *</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="O seu nome"
+              required
+            />
+          </div>
+
+          <!-- Telefone -->
+          <div class="form-group">
+            <label for="telefone">Telefone *</label>
+            <input
+              type="tel"
+              name="telefone"
+              id="telefone"
+              placeholder="+351 9XX XXX XXX"
+              required
+            />
+          </div>
+
+          <!-- Freguesia -->
+          <div class="form-group">
+            <label for="freguesia">Freguesia onde mora *</label>
+            <input
+              type="text"
+              name="freguesia"
+              id="freguesia"
+              placeholder="Ex: Tortosendo, Covilhã..."
+              required
+            />
+          </div>
+
+          <!-- Participar de Pequeno Grupo -->
+          <div class="form-group">
+            <label for="pequeno_grupo"
+              >Gostaria de participar de um Pequeno Grupo?</label
+            >
+            <select name="pequeno_grupo" id="pequeno_grupo">
+              <option value="Sim">Sim, tenho interesse</option>
+              <option value="Não">Não, obrigado</option>
+              <option value="Talvez">Talvez, gostaria de saber mais</option>
+            </select>
+          </div>
+
+          <!-- Mensagem -->
+          <div class="form-group">
+            <label for="mensagem">Deixe uma mensagem (opcional)</label>
+            <textarea
+              name="mensagem"
+              id="mensagem"
+              placeholder="Alguma dúvida ou pedido de oração?"
+            ></textarea>
+          </div>
+
+          <!-- Consentimento RGPD -->
+          <div class="consent-group">
+            <input
+              type="checkbox"
+              name="consentimento_rgpd"
+              id="consentimento_rgpd"
+              value="Sim"
+              required
+            />
+            <label for="consentimento_rgpd">
+              Declaro que li e compreendi a
+              <a href="politica-privacidade.html" target="_blank"
+                >Política de Privacidade</a
+              >
+              e
+              <strong>consinto, de forma livre, informada e inequívoca</strong>,
+              que a Igreja Portugal para Cristo - Covilhã recolha e trate os
+              meus dados pessoais (nome, telefone, e-mail e freguesia) com a
+              finalidade exclusiva de contacto, acolhimento e integração na
+              comunidade. Compreendo que posso retirar este consentimento a
+              qualquer momento, sem afetar a licitude do tratamento anterior, e
+              que os meus dados serão conservados apenas pelo tempo necessário
+              para cumprir esta finalidade.
+            </label>
+          </div>
+
+          <!-- Botão de Envio -->
+          <button type="submit" class="btn-submit">Enviar Informações</button>
+        </form>
+
+        <a href="index.html" class="btn-back">
+          <i class="fas fa-arrow-left"></i> Voltar ao início
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
